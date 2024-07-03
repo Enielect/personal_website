@@ -199,7 +199,7 @@ article.card p {
 
 @media screen and (max-width: 500px) {
   article.card {
-    padding: 10px;
+    padding: 20px;
   }
 
   article.card p {
