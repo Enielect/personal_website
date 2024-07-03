@@ -1,9 +1,21 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
 section.first {
-  background-color: #030301;
-  color: white;
-  height: 500px;
-  display: grid;
-  grid-template-columns: 50px 1fr;
+  flex: 1;
+  padding: 30px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .second nav {
@@ -12,65 +24,68 @@ section.first {
   padding-block: auto;
 }
 
-.links {
-  font-size: 20px;
-  display: grid;
-  align-content: center;
-  padding-inline: 15px;
-  gap: 10px;
+body {
+  overflow-x: hidden;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
 }
 
-.links a {
-  text-decoration: none;
-  color: white;
+.body-container {
+  display: flex;
+  max-width: 1200px;
+  height: 100dvh;
 }
 
-.top-bar {
-  background-color: #030301;
+.intro .description {
+  text-align: center;
+}
+
+.bottom-bar {
   display: flex;
   height: 50px;
   align-items: center;
   justify-content: space-between;
   padding-inline: 20px;
+  margin-bottom: 20px;
 }
 
-.top-bar .time {
+.description h2,
+.description h1,
+.description p {
+  text-align: center;
+}
+
+.bottom-bar .time {
   padding-block: auto;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5px;
-  font-size: 18px;
+  font-size: 16px;
   letter-spacing: 2px;
 }
 
-.top-bar .contact {
-  background-color: green;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-/* .content .image-container {
-  border-radius: 20px;
-  height: 210px;
-  width: 1000px;
-} */
-
-.content .image-container img {
-  /* width: 100%;
-  height: 100%; */
-  border-radius: 4px;
-}
-
-.hero {
-  /* height: calc(100% - 40px); */
-  position: relative;
-  top: 50px;
+.bottom-bar ul {
+  list-style-type: none;
   display: flex;
+  gap: 8px;
+}
+
+.bottom-bar li a {
+  color: black;
+  text-decoration: underline;
+}
+
+.intro {
+  display: flex;
+  margin-inline: auto;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 .hero h2 {
@@ -82,18 +97,6 @@ section.first {
   font-size: 26px;
 }
 
-.circle {
-  width: 140px;
-  height: 140px;
-  border-radius: 100%;
-  background-color: blue;
-  filter: blur(30px);
-  position: relative;
-  left: 100px;
-  top: 50px;
-  box-shadow: 2px 2px 180px blue;
-}
-
 section.about {
   width: 100%;
   background-color: blue;
@@ -101,68 +104,50 @@ section.about {
   justify-content: center;
 }
 
-section.about .content {
-  padding: 40px;
-  display: flex;
-  gap: 12px;
-  max-width: 600px;
-}
-
-.content p {
-  font-size: 13px;
-}
-
-.content h1 {
-  font-size: 20px;
-  margin-top: 0;
-}
-
 .goals-section {
-  background: red;
-  padding-block: 40px;
+
+  flex: 2;
+}
+
+.goals-content {
+  display: flex;
+  justify-content: space-between;
 }
 
 .goals-section h1 {
   text-align: center;
   padding-block: 20px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
-.goals-content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  padding-inline: 30px;
-}
-
-.goals-container {
+.goals-section {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.card-3 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-  margin-inline: auto;
+.goals-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 article.card {
-  padding: 5px 50px;
-  max-width: 300px;
-  backdrop-filter: blur(20px);
-  background: pink;
+  padding: 18px 50px;
+  max-width: 600px;
   border-radius: 10px;
-  text-align: center;
-  /* height: 90px; */
 }
 
-article.card h2 {
-  font-size: 17px;
+article.card h1 {
+  font-size: 24px;
+  text-align: left;
 }
 
 article.card p {
-  font-size: 12px;
+  font-size: 16px;
+  margin-bottom: 20px;
+  text-align: justify;
 }
 
 @media screen and (max-width: 890px) {
@@ -180,13 +165,47 @@ article.card p {
   }
 }
 
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 760px) {
   .about .content {
     flex-direction: column;
     align-items: center;
   }
 
+  .bottom-bar {
+    flex-direction: column;
+  }
+
+  .top-bar {
+    flex-direction: column;
+  }
+
+  .body-container {
+    flex-direction: column;
+    gap: 0px;
+  }
+
   .about .content article {
+    text-align: center;
+  }
+
+  article.card h1,
+  article.card h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  article.card {
+    padding: 10px;
+  }
+
+  article.card p {
+    font-size: 14px;
+  }
+
+  article.card h1,
+  article.card h2 {
+    font-size: 20px;
     text-align: center;
   }
 }

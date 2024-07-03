@@ -3,122 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/7ed2220025.js"
-      crossorigin="anonymous"
-    ></script>
+
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
     <title>Document</title>
   </head>
   <body>
-    <section class="first">
-      <nav class="links">
-        <div>
-          <a href="#"><i class="fa-brands fa-facebook"></i></a>
-        </div>
-        <div>
-          <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-        </div>
-        <div>
-          <a href="#"><i class="fa-brands fa-instagram"></i></a>
-        </div>
-      </nav>
-      <div>
-        <div class="top-bar">
-          <div class="time">
-            <span class="utcDay" data-testid="currentDay"></span> <span>,</span> <span class="utcTime" data-testid="currentTime"></span>
+    <div class="body-container">
+      <section class="first">
+        <div class="intro">
+          <div class="image-container">
+            <img
+              data-testid="slackProfilePicture"
+              src="/public/eniola (3).jpg"
+              alt=""
+            />
           </div>
-          <span class="contact">Contact me</span>
-        </div>
-        <div class="circle"></div>
-        <div class="hero">
-          <div>
-            <h2>Hi, I am Eniola</h2>
+          <div class="description">
+            <h2>
+              👋 Hi, I am
+              <span data-testid="slackDisplayName">Eniola Abayomi</span>
+            </h2>
             <h1>Frontend Developer</h1>
-            <p style="font-size: 12px">
-              The developer you need to bring your website to life
-            </p>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="about">
-      <div class="content">
-        <div class="image-container">
-          <img src="/public/eniola (3).jpg" alt="" />
+      </section>
+      <section class="goals-section">
+        <!-- <div class="goals-container"> -->
+        <div class="goals-wrapper">
+          <div class="goals-content">
+            <article class="card">
+              <h1>My goals for the next 2 years</h1>
+              <!-- <p>
+                I have some backend developer friends, and I see how they are
+                are able to build fullstack applications. I would like to learn
+                how to build a fullstack application and be able to build my own
+                projects from scratch. Understanding the backend would also help
+                me to understand how to make my frontend applications more
+                secure.
+              </p> -->
+              <p>
+                It is fantastic how many tools are out ther that make the lives
+                of frontend Developers like myself easier. I would like to build
+                a javascript farmwork that would help frontend developers build
+                websites faster and easier. I am not exactly sure of what the
+                project will be on yet but that is one thing I sure have on my
+                head. There are some complex websites I vist that I just marvel
+                at the animations positoning that goes on in the website. I
+                would like to learn how to make such animations and use them in
+                my projects, and possibly be part of the best.
+              </p>
+              <p style="font-size: 12px;">You can reach me via my email 📬: <span data-testid="slackEmail">eniolafaithful57@gmail.com</span></p>
+            </article>
+          </div>
+
+          <div class="bottom-bar">
+            <div class="">
+              <div
+                class="utcTime"
+                style="text-align: center"
+                data-testid="currentTimeUTC"
+              ></div>
+              <div class="time">
+                <span class="utcDay" data-testid="currentDay"></span>
+                <span>,</span>
+                <span class="utcMonth"></span>
+                <span class="utcYear"></span>
+              </div>
+            </div>
+            <ul class="list">
+              <li>
+                <a href="http://hng.tech/learn" data-testid="hngLink">Learn</a>
+              </li>
+              <li>
+                <a href="http://keyword.dog" data-testid="keywordLink"
+                  >Keyword</a
+                >
+              </li>
+              <li>
+                <a
+                  href="http://scrapeanyweb.site"
+                  data-testid="scrapeanywebLink"
+                  >Scrape</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-        <article>
-          <h1>About Me</h1>
-          <p>
-            I am <span data-testid="slackDisplayName">Eniola Abayomi</span>, a
-            talented product designer hailing from the vibrant city of Lagos!
-            With a passion for innovation and a keen eye for aesthetics, Bukunmi
-            is dedicated to creating exceptional user experiences through
-            thoughtful and user-centered design. Bukunmi's work embodies a
-            perfect blend of functionality, elegance, and practicality. Whether
-            it's designing sleek mobile applications, intuitive web interfaces,
-            or cutting-edge physical products, Bukunmi consistently strives to
-            bridge the gap between technology and human needs.
-          </p>
-        </article>
-      </div>
-    </section>
-    <section class="goals-section">
-      <h1>My gaols for the next 2 years</h1>
-      <div class="goals-container">
-        <div class="goals-content">
-          <article class="card">
-            <h2>Learn A little Backend</h2>
-            <p>
-              I have some backend developer friends, and I see how they are are
-              able to build fullstack applications. I would like to learn how to
-              build a fullstack application and be able to build my own projects
-              from scratch. Understanding the backend would also help me to
-              understand how to make my frontend applications more secure.
-            </p>
-          </article>
-          <article class="card">
-            <h2>I want to build an npm packages for frontend Engineers</h2>
-            <p>
-              It is fantastic how many tools are out ther that make the lives of
-              frontend Developers like myself easier. I would like to build a
-              javascript farmwork that would help frontend developers build
-              websites faster and easier. I am not exactly sure of what the
-              project will be on yet but that is one thing I sure have on my
-              head
-            </p>
-          </article>
-          <article class="card card-3">
-            <h2>Machine Learning</h2>
-            <p>
-              It is fantastic how machine learning has been able to solve a lot
-              of problems in the world today. I would like to learn more about
-              machine learning and how to use it in my projects. . I am not
-              exactly sure of what the project will be on yet but that is one
-              thing I sure have on my head
-            </p>
-          </article>
-          <article class="card">
-            <h2>Working at A big Tech Company(Discord)</h2>
-            <p>
-              I would love to work at a big tech company which people use very
-              frequenly. At least for the famz that I can get(lol). But also to
-              learn from the best in the industry and be able to work on
-              projects that are used by millions of people.
-            </p>
-          </article>
-          <article class="card">
-            <h2>Fantastic Animations</h2>
-            <p>
-              There are some complex websites I vist that I just marvel at the
-              animations positoning that goes on in the website. I would like to
-              learn how to make such animations and use them in my projects, and
-              possibly be part of the best.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-    <script src="script.js"></script>
+        <!-- </div> -->
+      </section>
+    </div>
   </body>
 </html>
